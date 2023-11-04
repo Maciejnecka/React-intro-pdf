@@ -103,10 +103,22 @@ const root = createRoot(document.querySelector('#root'));
 //   },
 // };
 
+// const App = () => {
+//   return (
+//     <div>
+//       <h1 className="title">Tytuł</h1>
+//     </div>
+//   );
+// };
+
+// root.render(<App />);
+
+const H1 = () => <h1 className="title">Tytuł</h1>;
+
 const App = () => {
   return (
     <div>
-      <h1 className="title">Tytuł</h1>
+      <H1 />
     </div>
   );
 };

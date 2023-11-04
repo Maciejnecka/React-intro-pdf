@@ -1,5 +1,5 @@
 'use strict';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { createRoot } from 'react-dom/client';
 
 const root = createRoot(document.querySelector('#root'));
@@ -46,9 +46,30 @@ const root = createRoot(document.querySelector('#root'));
 //   </h1>
 // );
 
-const getText = (str) => {
-  return <h1>{str}</h1>;
-};
+// const getText = (str) => {
+//   return <h1>{str}</h1>;
+// };
 
-const text = <em>Hello World {2 + 2}</em>;
-root.render(<section>{getText(text)}</section>);
+// const text = <em>Hello World {2 + 2}</em>;
+// root.render(<section>{getText(text)}</section>);
+
+const userInfo = (
+  <Fragment>
+    <h1>Jan Programista</h1>
+    <p>Opis dokonań Jana programisty</p>
+  </Fragment>
+);
+
+const userSkills = (
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+  </ul>
+);
+
+root.render(
+  <section>
+    {userInfo} {userSkills}
+  </section>
+);

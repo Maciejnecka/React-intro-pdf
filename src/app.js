@@ -1,7 +1,8 @@
 'use strict';
-import React, { Fragment } from 'react';
-import { render } from 'react-dom';
-import { createRoot } from 'react-dom/client';
+import React from 'react';
+import H1 from './components/H1';
+// import { createRoot } from 'react-dom/client';
+// import { render } from 'react-dom';
 
 const root = createRoot(document.querySelector('#root'));
 
@@ -140,3 +141,11 @@ const root = createRoot(document.querySelector('#root'));
 // };
 
 // root.render(<App />);
+
+const App = () => (
+  <div>
+    <H1 />
+  </div>
+);
+
+export default App;

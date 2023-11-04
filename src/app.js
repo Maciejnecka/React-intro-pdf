@@ -1,5 +1,6 @@
 'use strict';
 import React, { Fragment } from 'react';
+import { render } from 'react-dom';
 import { createRoot } from 'react-dom/client';
 
 const root = createRoot(document.querySelector('#root'));
@@ -113,14 +114,29 @@ const root = createRoot(document.querySelector('#root'));
 
 // root.render(<App />);
 
-const H1 = () => <h1 className="title">Tytuł</h1>;
+// const H1 = () => <h1 className="title">Tytuł</h1>;
 
-const App = () => {
-  return (
-    <div>
-      <H1 />
-    </div>
-  );
-};
+// const App = () => {
+//   return (
+//     <div>
+//       <H1 />
+//     </div>
+//   );
+// };
 
-root.render(<App />);
+// root.render(<App />);
+
+// class H1 extends React.Component {
+//   render() {
+//     return <h1 className="title">Tytuł</h1>;
+//   }
+// }
+// const App = () => {
+//   return (
+//     <div>
+//       <H1 />
+//     </div>
+//   );
+// };
+
+// root.render(<App />);

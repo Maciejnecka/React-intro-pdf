@@ -53,23 +53,52 @@ const root = createRoot(document.querySelector('#root'));
 // const text = <em>Hello World {2 + 2}</em>;
 // root.render(<section>{getText(text)}</section>);
 
-const userInfo = (
-  <Fragment>
-    <h1>Jan Programista</h1>
-    <p>Opis dokonań Jana programisty</p>
-  </Fragment>
-);
+// const userInfo = (
+//   <Fragment>
+//     <h1>Jan Programista</h1>
+//     <p>Opis dokonań Jana programisty</p>
+//   </Fragment>
+// );
 
-const userSkills = (
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JS</li>
-  </ul>
-);
+// const userSkills = (
+//   <ul>
+//     <li>HTML</li>
+//     <li>CSS</li>
+//     <li>JS</li>
+//   </ul>
+// );
 
-root.render(
-  <section>
-    {userInfo} {userSkills}
-  </section>
-);
+// root.render(
+//   <section>
+//     {userInfo} {userSkills}
+//   </section>
+// );
+
+// root.render(
+//   <div>
+//     <h1 className="title">Title</h1>
+//   </div>
+// );
+
+// root.render(
+//   React.createElement(
+//     'div',
+//     null,
+//     React.createElement('h1', { className: 'title' }, 'Tytuł')
+//   )
+// );
+
+// const h1 = {
+//   type: 'h1',
+//   props: {
+//     clasName: 'title',
+//     children: 'Tytuł',
+//   },
+// };
+
+// const div = {
+//   type: 'div',
+//   props: {
+//     children: h1,
+//   },
+// };

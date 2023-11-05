@@ -1,10 +1,10 @@
-'use strict';
-import React from 'react';
-import H1 from './components/H1';
-// import { createRoot } from 'react-dom/client';
-// import { render } from 'react-dom';
+// 'use strict';
+// import React from 'react';
+// import H1 from './components/H1';
+// // import { createRoot } from 'react-dom/client';
+// // import { render } from 'react-dom';
 
-const root = createRoot(document.querySelector('#root'));
+// const root = createRoot(document.querySelector('#root'));
 
 // const myStyles = {
 //   border: '1px solid blue',
@@ -142,10 +142,64 @@ const root = createRoot(document.querySelector('#root'));
 
 // root.render(<App />);
 
-const App = () => (
-  <div>
-    <H1 />
-  </div>
-);
+// const App = () => (
+//   <div>
+//     <H1 />
+//   </div>
+// );
 
-export default App;
+// export default App;
+
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
+const root = createRoot(document.querySelector('#root'));
+
+// const Header = (props) => {
+//   return <header>{props.text}</header>;
+// };
+
+// const App = () => (
+//   <>
+//     <Header text="nagłówek" />
+//     <Header text="tytuł" />
+//   </>
+// );
+
+// root.render(<App />);
+
+// class Header extends React.Component {
+//   render() {
+//     return <header>{this.props.text}</header>;
+//   }
+// }
+// const App = () => <Header text="nagłówek" />;
+
+// root.render(<App />);
+
+// class Header extends React.Component {
+//   render() {
+//     const { text } = this.props;
+//     return <header>{text}</header>;
+//   }
+// }
+
+// const App = () => <Header text="nagłówek" />;
+
+// root.render(<App />);
+
+class Product extends React.Component {
+  render() {
+    const { name, price } = this.props.item;
+    return (
+      <ul>
+        <li>Name: {name}</li>
+        <li>Price: {price}</li>
+      </ul>
+    );
+  }
+}
+
+const pen = { name: 'Super długopis', price: 99 };
+const App = () => <Product item={pen} />;
+root.render(<App />);

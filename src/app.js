@@ -150,11 +150,6 @@
 
 // export default App;
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-
-const root = createRoot(document.querySelector('#root'));
-
 // const Header = (props) => {
 //   return <header>{props.text}</header>;
 // };
@@ -188,18 +183,27 @@ const root = createRoot(document.querySelector('#root'));
 
 // root.render(<App />);
 
-class Product extends React.Component {
-  render() {
-    const { name, price } = this.props.item;
-    return (
-      <ul>
-        <li>Name: {name}</li>
-        <li>Price: {price}</li>
-      </ul>
-    );
-  }
-}
+// class Product extends React.Component {
+//   render() {
+//     const { name, price } = this.props.item;
+//     return (
+//       <ul>
+//         <li>Name: {name}</li>
+//         <li>Price: {price}</li>
+//       </ul>
+//     );
+//   }
+// }
 
-const pen = { name: 'Super długopis', price: 99 };
-const App = () => <Product item={pen} />;
+// const pen = { name: 'Super długopis', price: 99 };
+// const App = () => <Product item={pen} />;
+// root.render(<App />);
+
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import Product from './components/Product';
+
+const root = createRoot(document.querySelector('#root'));
+
+const App = () => <Product name="Komputer" />;
 root.render(<App />);
